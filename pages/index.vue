@@ -1,3 +1,7 @@
 <template>
-  <h1>Hello PAGE</h1>
+  <AppNav />
 </template>
+
+<script lang="ts" setup>
+import AppNav from "~/components/AppNav.vue";
+</script>
