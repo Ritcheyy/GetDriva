@@ -1,0 +1,556 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-body;
+  }
+
+  .break-hyphen {
+    hyphens: auto;
+  }
+
+  input {
+    @apply disabled:cursor-not-allowed disabled:bg-gray-50;
+  }
+
+  input.loading {
+    @apply bg-gray-50 cursor-wait;
+  }
+
+  input::placeholder {
+    @apply text-gray-400;
+  }
+
+  /* remove spin arrows from number input fields */
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  .page-loader {
+    @apply min-h-screen fixed top-0 left-0 right-0 bottom-0;
+    @apply bg-white items-center justify-center flex z-50;
+  }
+
+  /*
+    * Typography
+    */
+  h1,
+  .h1 {
+    @apply font-bold;
+
+    font-size: 4rem;
+    line-height: 5.5rem;
+  }
+
+  h2,
+  .h2 {
+    @apply font-bold;
+
+    font-size: 3rem;
+    line-height: 3.875rem;
+  }
+
+  h3,
+  .h3 {
+    @apply font-semibold;
+
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+  }
+
+  h4,
+  .h4 {
+    @apply font-semibold;
+
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+
+  h5,
+  .h5 {
+    @apply font-semibold;
+
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .font-body {
+    @apply font-normal;
+
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+  }
+
+  .font-body-2 {
+    @apply font-normal;
+
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .font-subtext {
+    @apply font-normal;
+
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+
+  .font-caption {
+    @apply font-normal;
+
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+
+  .font-link {
+    @apply font-semibold;
+
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .txt-clip {
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .txt-ellipses {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  /*
+      * Buttons: primary
+      */
+  .btn {
+    @apply text-center text-white bg-primary-500 active:bg-primary-500 hover:bg-primary-400 font-normal px-4 py-2;
+    @apply rounded-[0.625rem] shadow-sm hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150;
+    @apply relative border border-transparent focus:ring-2 focus:ring-offset-1 focus:ring-primary-500;
+    @apply flex items-center justify-center;
+  }
+
+  .btn.outline {
+    @apply border-primary-500 bg-transparent text-primary-500;
+  }
+
+  .btn.sm {
+    @apply text-xs px-4 py-2;
+  }
+
+  .btn.md {
+    @apply text-sm font-medium px-6 py-2;
+  }
+
+  .btn.lg {
+    @apply text-base font-medium px-8 py-2;
+  }
+
+  .btn.xl {
+    @apply text-base font-medium px-9 py-3;
+  }
+
+  .btn.xxl {
+    @apply text-base font-medium px-9 py-[0.9375rem];
+  }
+
+  .btn.loading {
+    @apply focus:ring-primary-500;
+  }
+
+  .btn.disabled,
+  .btn[disabled] {
+    @apply cursor-not-allowed shadow-none hover:shadow-none opacity-50;
+  }
+
+  .btn .spinner {
+    @apply h-5;
+  }
+
+  .btn.loading .spinner {
+    @apply w-8;
+  }
+
+  .btn .spinner svg {
+    @apply h-5 w-5 mr-3;
+  }
+
+  /*
+      * Buttons: secondary
+      */
+  .btn.secondary {
+    /*@apply text-current bg-secondary-400 active:bg-secondary-400 hover:bg-secondary-400;*/
+    /*@apply focus:ring-secondary-500;*/
+  }
+
+  .btn.secondary.outline {
+    /*@apply border-secondary-500 bg-transparent text-secondary-500;*/
+  }
+
+  /*
+      * Icon Buttons: primary
+      */
+  .icon-btn {
+    @apply inline-flex items-center p-1 border border-transparent rounded-full shadow-sm text-white;
+    @apply bg-primary-500 hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+
+  .icon-btn.outline {
+    @apply border-primary-500 bg-transparent text-primary-500;
+  }
+
+  .icon-btn.sm {
+    @apply text-xs p-2;
+  }
+
+  .icon-btn.md {
+    @apply text-sm font-medium p-4;
+  }
+
+  .icon-btn.lg {
+    @apply text-base font-medium p-5;
+  }
+
+  .icon-btn.xl {
+    @apply text-base font-medium p-6;
+  }
+
+  .icon-btn.xxl {
+    @apply text-base font-medium p-7;
+  }
+
+  .icon-btn.loading {
+    @apply bg-dGray-base cursor-wait shadow-none hover:shadow-none focus:ring-dGray-base;
+  }
+
+  .icon-btn.disabled,
+  .icon-btn[disabled] {
+    @apply cursor-not-allowed shadow-none hover:shadow-none focus:ring-0 opacity-30;
+  }
+
+  .icon-btn.transparent {
+    @apply text-current bg-transparent active:bg-transparent hover:bg-transparent;
+    @apply ring-0 ring-offset-0 focus:ring-0 focus:ring-offset-0;
+  }
+
+  /*
+      * Icon Buttons: secondary
+      */
+  .icon-btn.secondary {
+    /*@apply text-current bg-secondary-400 active:bg-secondary-400 hover:bg-secondary-400;*/
+    /*@apply focus:ring-secondary-500;*/
+  }
+
+  .icon-btn.secondary.outline {
+    /*@apply border-secondary-500 bg-transparent text-secondary-500;*/
+  }
+
+  .icon-btn.secondary.loading {
+    /*@apply bg-secondary-100 cursor-wait shadow-none hover:shadow-none focus:ring-secondary-100;*/
+  }
+
+  /*
+      * Form Elements: checkbox
+      */
+  .form-checkbox {
+    @apply flex items-center;
+  }
+
+  .form-checkbox input {
+    @apply h-5 w-5 text-primary-500 border-gray-200 rounded disabled:border-gray-100 disabled:bg-gray-100;
+    @apply cursor-pointer;
+  }
+
+  .form-checkbox label {
+    @apply ml-2 block text-sm text-gray-900 cursor-pointer font-normal text-muted text-[0.875rem] leading-5;
+  }
+
+  .form-checkbox + .form-input-error {
+    @apply ml-3;
+  }
+
+  .form-checkbox.has-error label {
+    @apply !text-red-500;
+  }
+
+  /*
+      * Form Elements: input
+      */
+
+  .form-input {
+    @apply rounded-[0.625rem] relative border border-gray-200 focus-within:border-primary-500 focus:border-primary-500 focus-within:outline-none focus:outline-none shadow-none;
+    @apply flex;
+  }
+
+  .form-input.otp-input {
+    @apply border-none focus:border-none;
+  }
+
+  .form-input .otp-input-wrapper {
+    @apply w-full flex items-center justify-between space-x-3 md:space-x-4 lg:space-x-6;
+  }
+
+  .form-input .otp-input-wrapper > div {
+    @apply w-full;
+  }
+
+  .form-input.otp-input .otp-input-field {
+    @apply rounded-[0.625rem] border !border-solid !border-gray-200 w-full;
+    @apply focus-within:!border-primary-500 focus:!border-primary-500 focus-within:!outline-none focus:outline-none text-center;
+    @apply px-2 py-3 lg:px-4 lg:py-4;
+  }
+
+  .form-input.disabled.otp-input {
+    @apply border-none bg-transparent;
+  }
+
+  .form-input.hidden-input {
+    @apply border-none focus:border-none w-0 h-0;
+  }
+
+  .form-input.hidden-input label {
+    @apply hidden;
+  }
+
+  .form-input.disabled,
+  .form-input.disabled.otp-input .otp-input-field {
+    @apply border-gray-100 bg-gray-100;
+  }
+
+  .form-input.has-error,
+  .form-input.otp-input.has-error .otp-input-field {
+    @apply !border-red-300 focus:!ring-red-500 focus:!border-red-500 focus-within:!ring-red-500 focus-within:!border-red-500;
+  }
+
+  .form-input.has-error label {
+    @apply text-red-400;
+  }
+
+  .form-input label {
+    @apply absolute left-0 text-base px-4 duration-300 origin-0 focus:outline-none text-muted;
+
+    font-weight: 400;
+    top: 0.125rem;
+    padding-top: 0.8rem;
+  }
+
+  .form-input input,
+  .form-input .vue__time-picker input.vue__time-picker-input {
+    @apply block px-4 pt-[1.25rem] pb-[0.75rem] w-full text-base appearance-none focus:outline-none focus:ring-0 focus-within:outline-none;
+    @apply bg-transparent shadow-none border-none rounded-lg h-auto;
+  }
+
+  .form-input .vue__time-picker {
+    @apply w-full font-sans;
+  }
+
+  .form-input .vue__time-picker .dropdown {
+    top: 3.5rem;
+  }
+
+  .form-input.hide-picker {
+    overflow: hidden;
+    height: 0;
+    width: 148px;
+  }
+
+  .form-input.hide-picker .dp__input_wrap,
+  .form-input.hide-picker .dp__input_wrap input {
+    padding: 0;
+    height: 0;
+    width: 148px;
+  }
+
+  .form-input.has-message ~ .message {
+    @apply text-left;
+  }
+
+  .form-input input:focus-within ~ label,
+  .form-input input:focus ~ label,
+  .form-input input:not(:placeholder-shown) ~ label,
+  .form-input .vue__time-picker:focus-within + label,
+  .form-input .vue__time-picker:focus + label,
+  .form-input.has-value .vue__time-picker + label {
+    @apply transform -translate-y-1 z-0 ml-3 px-1 py-0;
+
+    --tw-scale-x: 0.65;
+    --tw-scale-y: 0.65;
+  }
+
+  /*
+      * Form Elements: textarea
+      */
+  .form-input textarea {
+    @apply block px-4 pt-0 mt-4 pb-2 w-full text-base appearance-none focus:outline-none focus:ring-0 focus-within:outline-none;
+    @apply bg-transparent shadow-none border-none rounded-lg;
+  }
+
+  .form-input textarea:focus-within ~ label,
+  .form-input textarea:focus ~ label,
+  .form-input textarea:not(:placeholder-shown) ~ label {
+    @apply transform -translate-y-1 z-0 ml-3 px-1 py-0;
+
+    --tw-scale-x: 0.65;
+    --tw-scale-y: 0.65;
+  }
+
+  /*
+      * Form Elements: switch
+      */
+  .form-switch {
+    @apply relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full;
+    @apply cursor-pointer transition-colors ease-in-out duration-200 bg-gray-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-400;
+  }
+
+  .form-switch.checked {
+    @apply bg-primary-500;
+  }
+
+  .form-switch .indicator {
+    @apply pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform;
+    @apply ring-0 transition ease-in-out duration-200 translate-x-0;
+  }
+
+  .form-switch.checked .indicator {
+    @apply translate-x-5;
+  }
+
+  .form-switch.secondary {
+    /*@apply focus:ring-secondary-400;*/
+  }
+
+  .form-switch.secondary.checked {
+    /*@apply bg-secondary-500;*/
+  }
+
+  .form-switch.success {
+    @apply focus:ring-green-400;
+  }
+
+  .form-switch.success.checked {
+    @apply bg-green-500;
+  }
+
+  /*
+        * Form Elements: label disabled states
+        */
+  .form-checkbox input:disabled ~ label {
+    @apply text-gray-400;
+  }
+
+  .form-radio input:disabled ~ label {
+    @apply text-gray-400;
+  }
+
+  .form-switch input:disabled ~ label {
+    @apply text-gray-400;
+  }
+
+  .form-input-error {
+    @apply mt-2 text-sm text-red-600 px-4;
+  }
+
+  .empty-state {
+    @apply text-center p-6 border-2 border-gray-300 border-dashed rounded-lg bg-white;
+  }
+
+  .card .empty-state {
+    @apply rounded-t-none;
+  }
+
+  /*
+      * Auth screen styles
+      */
+  .auth-title {
+    @apply mt-4 text-[2.125rem] font-bold capitalize;
+
+    line-height: 2.6875rem;
+  }
+
+  .auth-title::after {
+    @apply text-primary-500 inline-block;
+    content: '.';
+    font-size: 3.375rem;
+    line-height: 0;
+  }
+
+  .lhar::before {
+    content: '\21CB';
+    color: currentColor;
+  }
+
+  .rhar::before {
+    content: '\21CC';
+    color: currentColor;
+  }
+
+  /**
+    * Loading svg
+    */
+  .spinner {
+    @apply h-4 sm:h-5 w-0 scale-0 opacity-0 transition;
+  }
+
+  .spinner.md {
+    @apply h-7;
+  }
+
+  .spinner.lg {
+    @apply h-10;
+  }
+
+  .loading .spinner {
+    @apply w-4 sm:w-5 scale-100 opacity-100 transition;
+  }
+
+  .loading .spinner.md {
+    @apply w-7;
+  }
+
+  .loading .spinner.lg {
+    @apply w-10;
+  }
+
+  .spinner svg {
+    @apply h-4 sm:h-5 w-4 sm:w-5;
+  }
+
+  .spinner.md svg {
+    @apply h-7 w-7;
+  }
+
+  .spinner.lg svg {
+    @apply h-10 w-10;
+  }
+
+  .loading .spinner svg {
+    @apply animate-spin;
+  }
+
+  .spinner svg > circle {
+    @apply opacity-25;
+  }
+
+  .spinner svg > path {
+    @apply opacity-75;
+  }
+
+  .skeleton-loader {
+    @apply animate-pulse border border-dGray-base shadow rounded-md p-4 w-full mx-auto;
+  }
+}

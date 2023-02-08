@@ -11,7 +11,10 @@ export default <Partial<Config>>{
         sans: ["Montserrat", "sans-serif"],
       },
       colors: {
-        primary: "#FF7A01",
+        primary: {
+          400: "#f6841c",
+          500: "#FF7A01",
+        },
         dYellow: "#F8B84E",
         brand: {
           100: "#FFF7F1",
@@ -23,6 +26,7 @@ export default <Partial<Config>>{
           500: "#646464",
           600: "#191A1C",
         },
+        body: "#3C3C3C",
       },
     },
   },

@@ -9,6 +9,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  components: {
+    dirs: ["~/components"],
+  },
   modules: ["@nuxtjs/tailwindcss"],
   tailwindcss: {
     exposeConfig: true,
