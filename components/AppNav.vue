@@ -12,7 +12,7 @@
 
       <div class="flex items-center">
         <nuxt-link class="mr-5" to="/">Hire a driver</nuxt-link>
-        <FormButton size="md">Become a driver</FormButton>
+        <BaseButton size="md">Become a driver</BaseButton>
       </div>
     </div>
   </div>

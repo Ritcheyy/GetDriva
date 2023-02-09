@@ -146,7 +146,7 @@
   */
   .btn {
     @apply text-center text-white bg-primary-500 active:bg-primary-500 hover:bg-primary-400 font-normal px-4 py-2;
-    @apply shadow-sm hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150;
+    @apply shadow-sm hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-100;
     @apply relative border border-transparent focus:ring-2 focus:ring-offset-1 focus:ring-primary-500;
     @apply flex items-center justify-center tracking-[-0.04em];
   }
@@ -160,11 +160,11 @@
   }
 
   .btn.md {
-    @apply text-sm font-medium py-2 w-[156px] h-11;
+    @apply text-sm font-medium py-2 min-w-[156px] h-11;
   }
 
   .btn.lg {
-    @apply text-base font-medium px-8 py-2;
+    @apply text-lg font-medium min-w-[192px] py-2 h-[60px];
   }
 
   .btn.xl {

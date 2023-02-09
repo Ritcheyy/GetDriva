@@ -1,7 +1,7 @@
 <template>
   <AppNav />
+  <HeroSection />
 </template>
 
 <script lang="ts" setup>
-import AppNav from "~/components/AppNav.vue";
 </script>

@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   components: {
     dirs: ["~/components"],
   },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-svgo"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-svgo", "@nuxt/image-edge"],
   tailwindcss: {
     exposeConfig: true,
     // exposeLevel: 1,  // determines tree-shaking (optional)
