@@ -14,8 +14,8 @@
       <nuxt-img class="w-6/12 absolute bottom-0" src="/images/screenshot.png" />
     </div>
 
-    <LeftBubble class="absolute left-0 bottom-24" />
-    <RightBubble class="absolute right-0 top-44" />
+    <LeftBubble class="left-bubble absolute left-0 bottom-24" />
+    <RightBubble class="right-bubble absolute right-0 top-44" />
   </div>
 </template>
 
@@ -27,5 +27,41 @@ import RightBubble from "@/assets/svg/right-bubble.svg"
 <style lang="scss" scoped>
 .hero {
   background: rgba(255, 233, 219, 0.38);
+}
+
+.left-bubble {
+  animation-name: bubbleLeftIn;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+}
+
+.right-bubble {
+  animation-name: bubbleRightIn;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+}
+
+@keyframes bubbleLeftIn {
+  from {
+    transform: translateX(-70px) translateY(96px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0px) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bubbleRightIn {
+  from {
+    //transform: translateX(-200px) translateY(100px);
+    transform: translateX(80px) translateY(-96px);
+    opacity: 0.2;
+  }
+  to {
+    //transform: translateX(-70px) translateY(176px);
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+  }
 }
 </style>
