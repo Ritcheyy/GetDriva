@@ -18,6 +18,7 @@ export default <Partial<Config>>{
         dYellow: "#F8B84E",
         brand: {
           100: "#FFF7F1",
+          blue: "#F0FBFF",
         },
         dGray: {
           base: "#3C3C3C",

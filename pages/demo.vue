@@ -1,11 +1,5 @@
 <template>
-  <FormButton
-      class="mt-4 sm:mt-0"
-      outline
-      loading
-  >
-    Cancel
-  </FormButton>
+  <BaseButton class="mt-4 sm:mt-0" outline loading> Cancel </BaseButton>
 </template>
 
 <script lang="ts" setup></script>

@@ -4,8 +4,8 @@
       <Logo />
 
       <div class="flex">
-        <nuxt-link to="/">How it works</nuxt-link>
-        <nuxt-link class="ml-6" to="/">Services</nuxt-link>
+        <nuxt-link to="/">Services</nuxt-link>
+        <nuxt-link class="ml-6" to="/">How it works</nuxt-link>
         <nuxt-link class="ml-6" to="/">About</nuxt-link>
         <nuxt-link class="ml-6" to="/">Features</nuxt-link>
       </div>
