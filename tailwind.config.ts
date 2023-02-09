@@ -12,6 +12,7 @@ export default <Partial<Config>>{
       },
       colors: {
         primary: {
+          200: "#FFE9D7",
           400: "#f6841c",
           500: "#FF7A01",
         },

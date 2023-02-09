@@ -1,8 +1,11 @@
 <template>
   <div class="hero w-full h-[840px] text-center relative">
-    <h1 class="w-8/12 m-auto mb-3 pt-[106px] leading-[72px]">Trusted and Experienced drivers at your service</h1>
+    <h1 class="w-8/12 m-auto mb-3 pt-[106px] leading-[72px]">
+      Trusted and Experienced drivers at your service
+    </h1>
     <p class="w-5/12 m-auto font-light text-black leading-5">
-      GetDriva provides you with trusted and reliable drivers to get you to your destination with ease
+      GetDriva provides you with trusted and reliable drivers to get you to your destination with
+      ease
     </p>
 
     <div class="flex justify-center mt-8">
@@ -31,13 +34,13 @@ import RightBubble from "@/assets/svg/right-bubble.svg"
 
 .left-bubble {
   animation-name: bubbleLeftIn;
-  animation-duration: 500ms;
+  animation-duration: 1s;
   animation-timing-function: linear;
 }
 
 .right-bubble {
   animation-name: bubbleRightIn;
-  animation-duration: 500ms;
+  animation-duration: 1s;
   animation-timing-function: linear;
 }
 
