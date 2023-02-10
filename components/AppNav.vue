@@ -6,8 +6,8 @@
       <div class="flex">
         <nuxt-link to="/">Services</nuxt-link>
         <nuxt-link class="ml-6" to="/">How it works</nuxt-link>
-        <nuxt-link class="ml-6" to="/">About</nuxt-link>
         <nuxt-link class="ml-6" to="/">Features</nuxt-link>
+        <nuxt-link class="ml-6" to="/">Drivers</nuxt-link>
       </div>
 
       <div class="flex items-center">

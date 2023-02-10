@@ -26,6 +26,7 @@
     "vue-tsc": "^1.0.24"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.9"
+    "@headlessui/vue": "^1.7.9",
+    "nuxt-swiper": "^1.0.0"
   }
 }
