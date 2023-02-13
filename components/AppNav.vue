@@ -1,5 +1,5 @@
 <template>
-  <div class="nav w-full">
+  <nav class="nav w-full">
     <div class="flex items-center justify-between h-20 w-11/12 m-auto">
       <Logo />
 
@@ -15,7 +15,7 @@
         <BaseButton size="md">Become a driver</BaseButton>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script lang="ts" setup>

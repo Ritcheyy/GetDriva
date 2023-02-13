@@ -21,9 +21,8 @@
             their contracts, payments, taxes etc
           </p>
         </div>
-        <div class="w-5/12">
-          <nuxt-img class="w-full h-full" src="/images/car-owner.png"></nuxt-img>
-        </div>
+        <div class="w-5/12"></div>
+        <nuxt-img class="w-full h-full" src="/images/car-owner.png"></nuxt-img>
       </div>
       <div class="w-full flex bg-brand-blue rounded-[30px]">
         <div class="w-5/12">
