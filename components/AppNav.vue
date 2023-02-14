@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-import Logo from "~/assets/svg/logo.svg"
+import Logo from "~/assets/svg/logo-sm.svg"
 </script>
 
 <style lang="scss" scoped>
