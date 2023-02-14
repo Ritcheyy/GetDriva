@@ -4,10 +4,10 @@
       <Logo />
 
       <div class="flex">
-        <nuxt-link to="/">Services</nuxt-link>
-        <nuxt-link class="ml-6" to="/">How it works</nuxt-link>
-        <nuxt-link class="ml-6" to="/">Features</nuxt-link>
-        <nuxt-link class="ml-6" to="/">Drivers</nuxt-link>
+        <nuxt-link to="/" class="transition duration-300">Services</nuxt-link>
+        <nuxt-link class="ml-6 transition duration-300" to="/">How it works</nuxt-link>
+        <nuxt-link class="ml-6 transition duration-300" to="/">Features</nuxt-link>
+        <nuxt-link class="ml-6 transition duration-300" to="/">Drivers</nuxt-link>
       </div>
 
       <div class="flex items-center">

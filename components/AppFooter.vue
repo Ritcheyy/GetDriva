@@ -4,10 +4,10 @@
       <Logo />
 
       <div class="flex">
-        <nuxt-link to="/" class="mr-7 font-normal cursor-pointer transition duration-300"> How it works </nuxt-link>
-        <nuxt-link to="/" class="mr-7 font-normal cursor-pointer transition duration-300">Services</nuxt-link>
-        <nuxt-link to="/" class="mr-7 font-normal cursor-pointer transition duration-300">About</nuxt-link>
-        <nuxt-link to="/" class="font-normal cursor-pointer transition duration-300">Features</nuxt-link>
+        <nuxt-link to="/" class="mr-7 font-normal transition duration-300"> How it works </nuxt-link>
+        <nuxt-link to="/" class="mr-7 font-normal transition duration-300">Services</nuxt-link>
+        <nuxt-link to="/" class="mr-7 font-normal transition duration-300">About</nuxt-link>
+        <nuxt-link to="/" class="font-normal transition duration-300">Features</nuxt-link>
       </div>
 
       <div class="flex">
