@@ -40,5 +40,5 @@ withDefaults(
   }
 )
 
-const enabled = ref(false)
+const enabled = ref<boolean>(false)
 </script>
