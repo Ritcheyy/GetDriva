@@ -33,7 +33,7 @@ import { defineProps } from "@vue/runtime-core"
 
 withDefaults(
   defineProps<{
-    isMobile: boolean
+    isMobile?: boolean
   }>(),
   {
     isMobile: false,

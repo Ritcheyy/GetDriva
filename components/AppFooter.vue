@@ -1,16 +1,18 @@
 <template>
-  <div class="w-11/12 m-auto mb-10">
-    <div class="app-footer pb-16 flex items-center justify-between">
+  <div class="w-10/12 md:w-11/12 m-auto mb-10">
+    <div class="app-footer pb-7 md:pb-16 md:flex items-center md:justify-between">
       <Logo />
 
-      <div class="flex">
-        <nuxt-link to="/" class="mr-7 font-normal transition duration-300"> How it works </nuxt-link>
-        <nuxt-link to="/" class="mr-7 font-normal transition duration-300">Services</nuxt-link>
-        <nuxt-link to="/" class="mr-7 font-normal transition duration-300">About</nuxt-link>
-        <nuxt-link to="/" class="font-normal transition duration-300">Features</nuxt-link>
+      <div class="flex justify-between mt-6 md:mt-0">
+        <nuxt-link to="/" class="text-sm md:text-base md:mr-7 font-normal transition duration-300">
+          How it works
+        </nuxt-link>
+        <nuxt-link to="/" class="text-sm md:text-base md:mr-7 font-normal transition duration-300">Services</nuxt-link>
+        <nuxt-link to="/" class="text-sm md:text-base md:mr-7 font-normal transition duration-300">About</nuxt-link>
+        <nuxt-link to="/" class="text-sm md:text-base font-normal transition duration-300">Features</nuxt-link>
       </div>
 
-      <div class="flex">
+      <div class="flex mt-6 md:mt-0">
         <Instagram class="hover:text-primary-400 cursor-pointer transition duration-300 mr-7" />
         <LinkedIn class="hover:text-primary-400 cursor-pointer transition duration-300 mr-7" />
         <Facebook class="hover:text-primary-400 cursor-pointer transition duration-300 mr-7" />
@@ -18,7 +20,7 @@
       </div>
     </div>
 
-    <div class="flex justify-between mt-9">
+    <div class="flex justify-between mt-6 md:mt-9">
       <p>Privacy policy</p>
       <p>© GetDriva</p>
     </div>

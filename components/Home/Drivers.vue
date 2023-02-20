@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16 md:mt-28 mb-20 md:mb-64">
+  <div class="mt-16 md:mt-28 mb-20 md:mb-36">
     <h4 class="w-10/12 sm:w-8/12 lg:w-6/12 xl:w-5/12 text-center m-auto leading-7 lg:leading-9 text-2xl lg:text-[32px]">
       We have a pool of drivers ready to meet your demands
     </h4>
@@ -17,18 +17,18 @@
         :creative-effect="creativeEffect"
         :effect="'creative'"
         :grabCursor="true"
-        slides-offset-before="20"
+        :slides-offset-before="20"
       >
-        <SwiperSlide v-for="slide in 6" :key="slide">
+        <SwiperSlide v-for="driver in drivers" :key="driver.id">
           <div class="driver-card">
             <nuxt-img
               class="w-full w-[200px] lg:w-[250px] xl:w-[285px] m-auto mt-[-62px] rounded-full"
               src="/images/drivers/susan.png"
             />
-            <h5 class="mt-4 text-base leading-5 font-semibold">Solomon Theophilus</h5>
+            <h5 class="mt-4 text-base leading-5 font-semibold">{{ driver.name }}</h5>
             <p class="text-xs mt-3 flex justify-center items-center"><VerifiedIcon class="mr-1" /> Verified</p>
-            <p class="text-xs mt-[6px]">Total rides: 20</p>
-            <p class="text-xs mt-[6px] mb-3">4.5(20 reviews)</p>
+            <p class="text-xs mt-[6px]">Total rides: {{ driver.totalRides }}</p>
+            <p class="text-xs mt-[6px] mb-3">{{ driver.rating.toFixed(1) }}({{ driver.reviewsCount }} reviews)</p>
             <nuxt-link to="/" class="text-primary-500 flex justify-center items-center">
               View <ArrowRight class="ml-1" />
             </nuxt-link>
@@ -40,6 +40,7 @@
 </template>
 
 <script setup lang="ts">
+import { Drivers } from "~/types"
 import VerifiedIcon from "@/assets/svg/verified.svg"
 import ArrowRight from "@/assets/svg/arrow-right.svg"
 
@@ -87,6 +88,54 @@ const creativeEffect = ref<any>({
     translate: ["100%", 0, 0],
   },
 })
+
+const drivers = ref<Drivers>([
+  {
+    id: 1,
+    name: "Emmanuel Thomas",
+    image: "/images/drivers/emmanuel.png",
+    verified: true,
+    totalRides: 20,
+    rating: 4.2,
+    reviewsCount: 20,
+  },
+  {
+    id: 2,
+    name: "Susan Gill",
+    image: "/images/drivers/susan.png",
+    verified: true,
+    totalRides: 50,
+    rating: 4.9,
+    reviewsCount: 31,
+  },
+  {
+    id: 3,
+    name: "Jeph Johnson",
+    image: "/images/drivers/solomon.png",
+    verified: true,
+    totalRides: 91,
+    rating: 4.1,
+    reviewsCount: 56,
+  },
+  {
+    id: 4,
+    name: "Solomon Theo",
+    image: "/images/drivers/fine-lady.png",
+    verified: true,
+    totalRides: 10,
+    rating: 5.0,
+    reviewsCount: 6,
+  },
+  {
+    id: 5,
+    name: "Desmond Harry",
+    image: "/images/drivers/emmanuel.png",
+    verified: true,
+    totalRides: 88,
+    rating: 4.0,
+    reviewsCount: 80,
+  },
+])
 </script>
 
 <style lang="scss" scoped>
