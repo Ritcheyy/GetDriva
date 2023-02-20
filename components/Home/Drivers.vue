@@ -23,12 +23,12 @@
           <div class="driver-card">
             <nuxt-img
               class="w-full w-[200px] lg:w-[250px] xl:w-[285px] m-auto mt-[-62px] rounded-full"
-              src="/images/drivers/susan.png"
+              :src="driver.image"
             />
             <h5 class="mt-4 text-base leading-5 font-semibold">{{ driver.name }}</h5>
             <p class="text-xs mt-3 flex justify-center items-center"><VerifiedIcon class="mr-1" /> Verified</p>
             <p class="text-xs mt-[6px]">Total rides: {{ driver.totalRides }}</p>
-            <p class="text-xs mt-[6px] mb-3">{{ driver.rating.toFixed(1) }}({{ driver.reviewsCount }} reviews)</p>
+            <p class="text-xs mt-[6px] mb-3">{{ driver.rating.toFixed(1) }} ({{ driver.reviewsCount }} reviews)</p>
             <nuxt-link to="/" class="text-primary-500 flex justify-center items-center">
               View <ArrowRight class="ml-1" />
             </nuxt-link>
@@ -93,7 +93,7 @@ const drivers = ref<Drivers>([
   {
     id: 1,
     name: "Emmanuel Thomas",
-    image: "/images/drivers/emmanuel.png",
+    image: "/images/drivers/solomon.png",
     verified: true,
     totalRides: 20,
     rating: 4.2,
@@ -102,7 +102,7 @@ const drivers = ref<Drivers>([
   {
     id: 2,
     name: "Susan Gill",
-    image: "/images/drivers/susan.png",
+    image: "/images/drivers/susan2.png",
     verified: true,
     totalRides: 50,
     rating: 4.9,
@@ -111,7 +111,7 @@ const drivers = ref<Drivers>([
   {
     id: 3,
     name: "Jeph Johnson",
-    image: "/images/drivers/solomon.png",
+    image: "/images/drivers/emmanuel.png",
     verified: true,
     totalRides: 91,
     rating: 4.1,
