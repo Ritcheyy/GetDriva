@@ -3,23 +3,31 @@
     <div class="flex items-center justify-between h-20 w-11/12 m-auto">
       <Logo />
 
-      <div class="flex">
+      <div class="hidden lg:flex">
         <nuxt-link to="/" class="transition duration-300">Services</nuxt-link>
         <nuxt-link class="ml-6 transition duration-300" to="/">How it works</nuxt-link>
         <nuxt-link class="ml-6 transition duration-300" to="/">Features</nuxt-link>
         <nuxt-link class="ml-6 transition duration-300" to="/">Drivers</nuxt-link>
       </div>
 
-      <div class="flex items-center">
+      <div class="hidden lg:flex items-center">
         <nuxt-link class="mr-5" to="/">Hire a driver</nuxt-link>
         <BaseButton size="md">Become a driver</BaseButton>
       </div>
+
+      <button
+        type="button"
+        class="h-10 w-10 flex justify-center items-center rounded-full outline-0 hover:bg-gray-200 transition duration-300 lg:hidden"
+      >
+        <MobileToggle />
+      </button>
     </div>
   </nav>
 </template>
 
 <script lang="ts" setup>
 import Logo from "~/assets/svg/logo-sm.svg"
+import MobileToggle from "~/assets/svg/mobile-toggle.svg"
 </script>
 
 <style lang="scss" scoped>
