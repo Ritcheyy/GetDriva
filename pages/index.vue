@@ -2,6 +2,7 @@
   <HomeHeroSection />
   <HomeServices />
   <HomeHowItWorks />
+  <HomeHowItWorksSmall />
   <HomeDrivers />
   <HomeJoinGetDriva />
 </template>
