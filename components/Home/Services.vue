@@ -1,6 +1,7 @@
 <template>
   <div
-    class="flex flex-col flex-col-reverse lg:flex-row items-center justify-between w-11/12 sm:w-11/12 lg:mt-36 md:mt-20 mt-16 mb-20 md:mb-28 m-auto"
+    id="services"
+    class="flex flex-col flex-col-reverse lg:flex-row items-center justify-between w-11/12 sm:w-11/12 lg:pt-36 md:pt-20 pt-16 mb-20 md:mb-28 m-auto"
   >
     <div class="xl:w-4/12 lg:w-4/12 sm:w-8/12 w-11/12 lg:mt-0 mt-10">
       <h3 class="text-3xl lg:h3 mb-4 lg:mb-7 font-bold">Moving around just got easier!</h3>

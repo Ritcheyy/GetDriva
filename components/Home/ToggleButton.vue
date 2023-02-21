@@ -29,7 +29,8 @@
 
 <script setup lang="ts">
 import { Switch } from "@headlessui/vue"
-import { defineProps } from "@vue/runtime-core"
+
+const emit = defineEmits(["update:modelValue"])
 
 withDefaults(
   defineProps<{
@@ -41,4 +42,7 @@ withDefaults(
 )
 
 const enabled = ref<boolean>(false)
+watch(enabled, (value) => {
+  emit("update:modelValue", value)
+})
 </script>

@@ -1,24 +1,26 @@
 <template>
-  <div class="how-it-works pb-6 hidden sm:block">
-    <div class="flex justify-center">
-      <HomeToggleButton class="mt-16" />
+  <div id="how-it-works" class="how-it-works pb-6 hidden sm:block">
+    <div class="flex justify-center pt-16">
+      <HomeToggleButton v-model="switchValue" />
     </div>
 
     <div class="sm:w-11/12 lg:w-9/12 flex justify-center items-center m-auto mt-16 mb-4">
       <div class="w-3/12">
         <div class="mb-32">
-          <div class="mr-0 m-auto step-box">1</div>
+          <div class="mr-0 m-auto step-box">{{ howItWorkSteps[activeTab][0].step }}</div>
           <h6 class="text-sm md:text-base font-medium text-right leading-5 mb-2">
-            Select your timeframe or destination
+            {{ howItWorkSteps[activeTab][0].title }}
           </h6>
           <p class="text-xs text-right">
-            Choose your pickup location and the time range/duration that you’ll need a driver for
+            {{ howItWorkSteps[activeTab][0].description }}
           </p>
         </div>
         <div>
-          <div class="mr-0 m-auto step-box">3</div>
-          <h6 class="text-sm md:text-base font-medium text-right leading-5 mb-2">Pay when service is rendered</h6>
-          <p class="text-xs text-right">Pay the driver the accumulated fee either by cash or card</p>
+          <div class="mr-0 m-auto step-box">{{ howItWorkSteps[activeTab][2].step }}</div>
+          <h6 class="text-sm md:text-base font-medium text-right leading-5 mb-2">
+            {{ howItWorkSteps[activeTab][2].title }}
+          </h6>
+          <p class="text-xs text-right">{{ howItWorkSteps[activeTab][2].description }}</p>
         </div>
       </div>
 
@@ -26,22 +28,34 @@
 
       <div class="w-3/12">
         <div class="mb-40">
-          <div class="ml-0 m-auto step-box">2</div>
-          <h6 class="text-sm md:text-base font-medium text-left leading-5 mb-2">Book a driver</h6>
-          <p class="text-xs text-left">GetDriva will match you with the nearest driver</p>
+          <div class="ml-0 m-auto step-box">{{ howItWorkSteps[activeTab][1].step }}</div>
+          <h6 class="text-sm md:text-base font-medium text-left leading-5 mb-2">
+            {{ howItWorkSteps[activeTab][1].title }}
+          </h6>
+          <p class="text-xs text-left">{{ howItWorkSteps[activeTab][1].description }}</p>
         </div>
 
         <div>
-          <div class="ml-0 m-auto step-box">4</div>
-          <h6 class="text-sm md:text-base font-medium text-left leading-5 mb-2">Rate your driver</h6>
+          <div class="ml-0 m-auto step-box">{{ howItWorkSteps[activeTab][3].step }}</div>
+          <h6 class="text-sm md:text-base font-medium text-left leading-5 mb-2">
+            {{ howItWorkSteps[activeTab][3].title }}
+          </h6>
           <p class="text-xs text-left">
-            Rate your driver according to the service rendered, you can also leave a review about your ride
+            {{ howItWorkSteps[activeTab][3].description }}
           </p>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { useHowItWorkSteps } from "~/composables/howItWorkSteps"
+
+const switchValue = ref<boolean>(false)
+const activeTab = computed<string>(() => (switchValue.value ? "driver" : "carOwners"))
+const howItWorkSteps = useHowItWorkSteps()
+</script>
 
 <style lang="scss" scoped>
 .how-it-works {

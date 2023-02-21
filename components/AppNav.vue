@@ -4,10 +4,9 @@
       <Logo />
 
       <div class="hidden lg:flex">
-        <nuxt-link to="/" class="transition duration-300">Services</nuxt-link>
-        <nuxt-link class="ml-6 transition duration-300" to="/">How it works</nuxt-link>
-        <nuxt-link class="ml-6 transition duration-300" to="/">Features</nuxt-link>
-        <nuxt-link class="ml-6 transition duration-300" to="/">Drivers</nuxt-link>
+        <nuxt-link to="/#services" class="transition duration-300">Services</nuxt-link>
+        <nuxt-link class="ml-6 transition duration-300" to="/#how-it-works">How it works</nuxt-link>
+        <nuxt-link class="ml-6 transition duration-300" to="/#drivers">Drivers</nuxt-link>
       </div>
 
       <div class="hidden lg:flex items-center">
