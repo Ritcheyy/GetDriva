@@ -2,6 +2,13 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      title: "GetDriva",
+      meta: [
+        {
+          name: "description",
+          content: "GetDriva provides you with trusted and reliable drivers to get you to your destination with ease",
+        },
+      ],
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
