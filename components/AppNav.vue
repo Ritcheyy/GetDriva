@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav w-full">
+  <nav class="nav w-full bg-white">
     <div class="flex items-center justify-between h-20 w-11/12 m-auto">
       <nuxt-link to="/">
         <Logo />
@@ -33,6 +33,7 @@ import MobileToggle from "~/assets/svg/mobile-toggle.svg"
 
 <style lang="scss" scoped>
 .nav {
+  position: sticky;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 </style>

@@ -13,7 +13,7 @@
             <p class="text-xs mt-3 flex justify-center items-center"><VerifiedIcon class="mr-1" /> Verified</p>
             <p class="text-xs mt-[6px]">Total rides: {{ driver.totalRides }}</p>
             <p class="text-xs mt-[6px] mb-3">{{ driver.rating.toFixed(1) }} ({{ driver.reviewsCount }} reviews)</p>
-            <nuxt-link to="/" class="text-primary-500 flex justify-center items-center">
+            <nuxt-link :to="`/drivers/${driver.id}`" class="text-primary-500 flex justify-center items-center">
               View <ArrowRight class="ml-1" />
             </nuxt-link>
           </div>
