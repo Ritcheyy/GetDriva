@@ -29,7 +29,7 @@
             <p class="text-xs mt-3 flex justify-center items-center"><VerifiedIcon class="mr-1" /> Verified</p>
             <p class="text-xs mt-[6px]">Total rides: {{ driver.totalRides }}</p>
             <p class="text-xs mt-[6px] mb-3">{{ driver.rating.toFixed(1) }} ({{ driver.reviewsCount }} reviews)</p>
-            <nuxt-link to="/" class="text-primary-500 flex justify-center items-center">
+            <nuxt-link :to="`/drivers/${driver.id}`" class="text-primary-500 flex justify-center items-center">
               View <ArrowRight class="ml-1" />
             </nuxt-link>
           </div>
@@ -44,6 +44,7 @@
 </template>
 
 <script setup lang="ts">
+import { v4 as uuidv4 } from "uuid"
 import { Drivers } from "~/types"
 import VerifiedIcon from "@/assets/svg/verified.svg"
 import ArrowRight from "@/assets/svg/arrow-right.svg"
@@ -95,7 +96,7 @@ const creativeEffect = ref<any>({
 
 const drivers = ref<Drivers>([
   {
-    id: 1,
+    id: uuidv4(),
     name: "Emmanuel Thomas",
     image: "/images/drivers/solomon.png",
     verified: true,
@@ -104,7 +105,7 @@ const drivers = ref<Drivers>([
     reviewsCount: 20,
   },
   {
-    id: 2,
+    id: uuidv4(),
     name: "Susan Gill",
     image: "/images/drivers/susan2.png",
     verified: true,
@@ -113,7 +114,7 @@ const drivers = ref<Drivers>([
     reviewsCount: 31,
   },
   {
-    id: 3,
+    id: uuidv4(),
     name: "Jeph Johnson",
     image: "/images/drivers/emmanuel.png",
     verified: true,
@@ -122,7 +123,7 @@ const drivers = ref<Drivers>([
     reviewsCount: 56,
   },
   {
-    id: 4,
+    id: uuidv4(),
     name: "Solomon Theo",
     image: "/images/drivers/fine-lady.png",
     verified: true,
@@ -131,7 +132,7 @@ const drivers = ref<Drivers>([
     reviewsCount: 6,
   },
   {
-    id: 5,
+    id: uuidv4(),
     name: "Desmond Harry",
     image: "/images/drivers/emmanuel.png",
     verified: true,
