@@ -1,7 +1,9 @@
 <template>
   <nav class="nav w-full">
     <div class="flex items-center justify-between h-20 w-11/12 m-auto">
-      <Logo />
+      <nuxt-link to="/">
+        <Logo />
+      </nuxt-link>
 
       <div class="hidden lg:flex">
         <nuxt-link to="/#services" class="transition duration-300">Services</nuxt-link>
@@ -10,7 +12,7 @@
       </div>
 
       <div class="hidden lg:flex items-center">
-        <nuxt-link class="mr-5" to="/">Hire a driver</nuxt-link>
+        <nuxt-link class="mr-5" to="/drivers">Hire a driver</nuxt-link>
         <BaseButton size="md">Become a driver</BaseButton>
       </div>
 

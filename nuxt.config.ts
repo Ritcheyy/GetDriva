@@ -18,10 +18,15 @@ export default defineNuxtConfig({
         },
       ],
     },
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in' // default
+    },
   },
   components: {
     dirs: ["~/components"],
   },
+  // @ts-ignore
   modules: ["@nuxtjs/tailwindcss", "nuxt-svgo", "@nuxt/image-edge", "nuxt-swiper"],
   tailwindcss: {
     exposeConfig: true,

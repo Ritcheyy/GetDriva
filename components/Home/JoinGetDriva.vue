@@ -11,7 +11,7 @@
       <p class="text-sm mt-3">Join over 100 people and sign up today to enjoy early access and pairing</p>
 
       <div class="sm:flex mt-[36px] lg:mt-[70px]">
-        <BaseButton size="sm" outline class="mr-4 mb-3 sm:mb-0">
+        <BaseButton size="sm" outline class="mr-4 mb-3 sm:mb-0" as-link to="/drivers" style="width: fit-content">
           <span class="px-4 font-medium">Hire a driver</span>
         </BaseButton>
         <BaseButton size="sm">

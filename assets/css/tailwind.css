@@ -148,7 +148,7 @@
     @apply text-center text-white bg-primary-500 active:bg-primary-500 hover:bg-primary-400 font-normal px-4 py-2;
     @apply shadow-sm hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-100;
     @apply relative border border-transparent focus:ring-2 focus:ring-offset-1 focus:ring-primary-500;
-    @apply flex items-center justify-center tracking-[-0.04em];
+    @apply flex items-center justify-center tracking-[-0.04em] cursor-pointer;
   }
 
   .btn.outline {
@@ -197,8 +197,8 @@
   }
 
   /*
-      * Buttons: secondary
-      */
+  * Buttons: secondary
+  */
   .btn.secondary {
     /*@apply text-current bg-secondary-400 active:bg-secondary-400 hover:bg-secondary-400;*/
     /*@apply focus:ring-secondary-500;*/
@@ -255,8 +255,8 @@
   }
 
   /*
-      * Icon Buttons: secondary
-      */
+  * Icon Buttons: secondary
+  */
   .icon-btn.secondary {
     /*@apply text-current bg-secondary-400 active:bg-secondary-400 hover:bg-secondary-400;*/
     /*@apply focus:ring-secondary-500;*/
@@ -271,8 +271,8 @@
   }
 
   /*
-      * Form Elements: checkbox
-      */
+  * Form Elements: checkbox
+  */
   .form-checkbox {
     @apply flex items-center;
   }
@@ -295,9 +295,8 @@
   }
 
   /*
-      * Form Elements: input
-      */
-
+  * Form Elements: input
+  */
   .form-input {
     @apply rounded-[0.625rem] relative border border-gray-200 focus-within:border-primary-500 focus:border-primary-500 focus-within:outline-none focus:outline-none shadow-none;
     @apply flex;

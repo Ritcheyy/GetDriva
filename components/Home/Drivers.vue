@@ -22,7 +22,7 @@
         <SwiperSlide v-for="driver in drivers" :key="driver.id">
           <div class="driver-card">
             <nuxt-img
-              class="w-full w-[200px] lg:w-[250px] xl:w-[285px] m-auto mt-[-62px] rounded-full"
+              class="w-10/12 lg:w-[250px] xl:w-[285px] m-auto mt-[-62px] rounded-full"
               :src="driver.image"
             />
             <h5 class="mt-4 text-base leading-5 font-semibold">{{ driver.name }}</h5>
@@ -35,6 +35,10 @@
           </div>
         </SwiperSlide>
       </Swiper>
+
+      <nuxt-link to="/drivers" class="mt-8 text-primary-500 flex justify-center items-center">
+        View All Drivers <ArrowRight class="ml-1" />
+      </nuxt-link>
     </div>
   </div>
 </template>

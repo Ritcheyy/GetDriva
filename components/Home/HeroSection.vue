@@ -12,10 +12,10 @@
     </p>
 
     <div class="flex justify-center mt-8">
-      <BaseButton class="hidden md:flex mr-4" size="lg" outline>Hire a driver</BaseButton>
+      <BaseButton class="hidden md:flex mr-4" size="lg" outline as-link to="/drivers">Hire a driver</BaseButton>
       <BaseButton class="hidden md:flex" size="lg">Become a driver</BaseButton>
 
-      <BaseButton class="md:hidden mr-2" size="sm" outline>Hire a driver</BaseButton>
+      <BaseButton class="md:hidden mr-2" size="sm" outline as-link to="/drivers">Hire a driver</BaseButton>
       <BaseButton class="md:hidden" size="sm">Become a driver</BaseButton>
     </div>
 
