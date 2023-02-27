@@ -1,6 +1,6 @@
 <template>
-  <nav class="nav w-full bg-white">
-    <div class="flex items-center justify-between h-20 w-11/12 m-auto">
+  <nav class="nav w-full z-20" :class="{ active: isFixedVersion }">
+    <div class="flex items-center justify-between h-16 lg:h-20 w-11/12 m-auto">
       <nuxt-link to="/">
         <Logo />
       </nuxt-link>
@@ -29,11 +29,31 @@
 <script lang="ts" setup>
 import Logo from "~/assets/svg/logo-sm.svg"
 import MobileToggle from "~/assets/svg/mobile-toggle.svg"
+
+const scrollPosition = ref(0)
+const isFixedVersion = computed(() => scrollPosition.value >= 120)
+
+function handleScroll() {
+  scrollPosition.value = window.scrollY
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll)
+})
 </script>
 
 <style lang="scss" scoped>
 .nav {
-  position: sticky;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  background: transparent;
+  transition: all .2s linear;
+  &.active {
+    background: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
 }
 </style>

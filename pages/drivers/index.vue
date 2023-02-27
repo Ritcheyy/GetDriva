@@ -1,5 +1,5 @@
 <template>
-  <div class="drivers">
+  <div class="drivers pt-20">
     <div class="mb-[100px] lg:mb-[250px] w-11/12 lg:w-10/12 m-auto">
       <h5 class="text-center text-2xl mt-16 lg:mt-24 mb-16 w-10/12 text-center mx-auto">
         Hire a driver from GetDriva today!
@@ -29,6 +29,10 @@ import { v4 as uuidv4 } from "uuid"
 import { Drivers } from "~/types"
 import VerifiedIcon from "@/assets/svg/verified.svg"
 import ArrowRight from "@/assets/svg/arrow-right.svg"
+
+definePageMeta({
+  navClasses: 'active'
+})
 
 const drivers = ref<Drivers>([
   {

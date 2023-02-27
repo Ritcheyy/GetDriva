@@ -1,5 +1,5 @@
 <template>
-  <div class="hero w-full pb-[200px] sm:pb-[300px] md:pb-[300px] lg:pb-[400px] xl:pb-[450px] text-center relative">
+  <div class="hero w-full pt-20 pb-[200px] sm:pb-[300px] md:pb-[300px] lg:pb-[400px] xl:pb-[450px] text-center relative">
     <h1
       class="w-11/12 sm:w-8/12 md:w-7/12 text-3xl leading-8 pt-[85px] lg:w-10/12 xl:w-8/12 2xl:w-6/12 lg:text-[64px] m-auto mb-3 md:pt-[106px] lg:leading-[72px]"
     >

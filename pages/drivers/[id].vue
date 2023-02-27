@@ -1,5 +1,5 @@
 <template>
-  <div class="driver-profile-wrapper pt-16 pb-20 sm:pt-0 sm:pb-0">
+  <div class="driver-profile-wrapper pt-36 pb-20 sm:pt-20 sm:pb-0">
     <div class="driver-profile">
       <div class="sm:w-5/12 sm:mr-8 lg:mr-12">
         <nuxt-img class="w-full" src="/images/drivers/main.png" />
@@ -28,6 +28,7 @@ import VerifiedIcon from "@/assets/svg/verified.svg"
 
 definePageMeta({
   hideFooter: true,
+  navClasses: 'active',
 })
 </script>
 
