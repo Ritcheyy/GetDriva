@@ -563,4 +563,24 @@
     -webkit-animation-delay: 500ms;
     animation-delay: 500ms;
   }
+  .animate__animated.animate__delay-1500ms {
+    -webkit-animation-delay: 1500ms;
+    animation-delay: 1500ms;
+  }
+  .animate__animated.animate__delay-2500ms {
+    -webkit-animation-delay: 2500ms;
+    animation-delay: 2500ms;
+  }
+  .animate__animated.animate__delay-3500ms {
+    -webkit-animation-delay: 3500ms;
+    animation-delay: 3500ms;
+  }
+  .animate__animated.animate__delay-4500ms {
+    -webkit-animation-delay: 4500ms;
+    animation-delay: 4500ms;
+  }
+  .animate__animated.animate__delay-5500ms {
+    -webkit-animation-delay: 5500ms;
+    animation-delay: 5500ms;
+  }
 }
