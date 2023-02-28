@@ -5,6 +5,7 @@
 </template>
 
 <style>
+@import "animate.css";
 .page-enter-active,
 .page-leave-active {
   transition: all 0.6s;

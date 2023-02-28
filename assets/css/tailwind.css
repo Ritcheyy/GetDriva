@@ -559,4 +559,8 @@
   .skeleton-loader {
     @apply animate-pulse border border-dGray-base shadow rounded-md p-4 w-full mx-auto;
   }
+  .animate__animated.animate__delay-500ms {
+    -webkit-animation-delay: 500ms;
+    animation-delay: 500ms;
+  }
 }

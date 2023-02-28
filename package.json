@@ -28,6 +28,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.9",
     "@types/uuid": "^9.0.0",
+    "animate.css": "^4.1.1",
     "nuxt-swiper": "^1.0.0",
     "uuid": "^9.0.0",
     "vue-observe-visibility": "^2.0.0-alpha.1"

@@ -34,6 +34,7 @@ import RightBubble from "@/assets/svg/right-bubble.svg"
 
 <style lang="scss" scoped>
 .hero {
+  overflow: hidden;
   background: rgba(255, 233, 219, 0.4);
   @media screen and (min-width: 2000px) {
     padding-bottom: 700px;
