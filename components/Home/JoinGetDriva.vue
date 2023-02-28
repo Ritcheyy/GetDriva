@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="hidden lg:flex w-6/12 xl:w-6/12 2xl:w-4/12 justify-end items-end">
+    <div class="hidden lg:flex w-6/12 xl:w-6/12 2xl:w-6/12 justify-end items-end">
       <nuxt-img class="h-[310px]" src="/images/mockup-lg.png"></nuxt-img>
       <nuxt-img class="h-[210px]" src="/images/mockup-sm.png"></nuxt-img>
     </div>

@@ -1,6 +1,6 @@
 <template>
     <h1
-      class="w-11/12 sm:w-8/12 md:w-7/12 text-3xl leading-8 pt-[85px] lg:w-10/12 xl:w-8/12 2xl:w-6/12 lg:text-[64px] m-auto mb-3 md:pt-[106px] lg:leading-[72px]"
+      class="w-11/12 sm:w-8/12 md:w-7/12 text-3xl leading-8 pt-[85px] lg:w-10/12 xl:w-8/12 2xl:w-6/12 lg:text-[64px] m-auto mb-4 md:pt-[106px] lg:leading-[72px]"
     >
       Trusted and Experienced
       <span class="driver-text-wrapper">

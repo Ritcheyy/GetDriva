@@ -1,6 +1,6 @@
 <template>
   <div
-    class="hero w-full pt-20 pb-[200px] sm:pb-[300px] md:pb-[300px] lg:pb-[400px] xl:pb-[450px] text-center relative"
+    class="hero w-full pt-20 pb-[200px] sm:pb-[300px] md:pb-[300px] lg:pb-[400px] xl:pb-[450px] 2xl:pb-[500px] text-center relative"
   >
     <HomeHeroSectionTitle />
     <p
@@ -18,7 +18,7 @@
     </div>
 
     <div class="flex justify-center">
-      <nuxt-img class="hidden lg:block lg:w-6/12 2xl:w-4/12 absolute bottom-0" src="/images/screenshot.png" />
+      <nuxt-img class="image-lg hidden lg:block lg:w-6/12 2xl:w-6/12 absolute bottom-0" src="/images/screenshot.png" />
       <nuxt-img class="w-8/12 sm:w-7/12 md:w-6/12 lg:hidden absolute bottom-0" src="/images/screenshot-sm.png" />
     </div>
 
@@ -35,6 +35,12 @@ import RightBubble from "@/assets/svg/right-bubble.svg"
 <style lang="scss" scoped>
 .hero {
   background: rgba(255, 233, 219, 0.4);
+  @media screen and (min-width: 2000px) {
+    padding-bottom: 700px;
+    .image-lg {
+      width: 35% !important;
+    }
+  }
 }
 
 .left-bubble {
