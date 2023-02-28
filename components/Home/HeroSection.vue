@@ -1,10 +1,8 @@
 <template>
-  <div class="hero w-full pt-20 pb-[200px] sm:pb-[300px] md:pb-[300px] lg:pb-[400px] xl:pb-[450px] text-center relative">
-    <h1
-      class="w-11/12 sm:w-8/12 md:w-7/12 text-3xl leading-8 pt-[85px] lg:w-10/12 xl:w-8/12 2xl:w-6/12 lg:text-[64px] m-auto mb-3 md:pt-[106px] lg:leading-[72px]"
-    >
-      Trusted and Experienced drivers at your service
-    </h1>
+  <div
+    class="hero w-full pt-20 pb-[200px] sm:pb-[300px] md:pb-[300px] lg:pb-[400px] xl:pb-[450px] text-center relative"
+  >
+    <HomeHeroSectionTitle />
     <p
       class="w-10/12 text-xs md:text-base sm:w-8/12 md:w-6/12 lg:w-7/12 lg:w-5/12 m-auto font-light text-black lg:leading-5"
     >
@@ -36,7 +34,7 @@ import RightBubble from "@/assets/svg/right-bubble.svg"
 
 <style lang="scss" scoped>
 .hero {
-  background: rgba(255, 233, 219, 0.38);
+  background: rgba(255, 233, 219, 0.4);
 }
 
 .left-bubble {

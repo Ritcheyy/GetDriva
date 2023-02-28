@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex w-10/12 lg:h-[365px] m-auto rounded-[30px] md:rounded-[40px] px-10 sm:px-12 mb-20 md:mb-40 join-get-driva py-10 lg:py-0"
+    class="flex w-10/12 lg:h-[365px] m-auto rounded-[30px] md:rounded-[40px] px-8 sm:px-12 mb-20 md:mb-40 join-get-driva py-10 lg:py-0"
   >
     <div class="lg:w-6/12 xl:w-6/12">
       <h4
@@ -11,7 +11,14 @@
       <p class="text-sm mt-3">Join over 100 people and sign up today to enjoy early access and pairing</p>
 
       <div class="sm:flex mt-[36px] lg:mt-[70px]">
-        <BaseButton size="sm" outline class="mr-4 mb-3 sm:mb-0" as-link to="/drivers" style="width: fit-content">
+        <BaseButton
+          size="sm"
+          outline
+          class="mr-4 mb-3 sm:mb-0"
+          as-link
+          to="/drivers"
+          style="width: fit-content; background: #fff7f1"
+        >
           <span class="px-4 font-medium">Hire a driver</span>
         </BaseButton>
         <BaseButton size="sm">
@@ -30,6 +37,15 @@
 <style lang="scss" scoped>
 .join-get-driva {
   background: #fff7f1;
+  @media (max-width: 599px) {
+    background: url("/assets/svg/round-ball-sm.svg") no-repeat 200% 100%, #fff7f1;
+  }
+  @media (min-width: 600px) and (max-width: 763px) {
+    background: url("/assets/svg/round-ball-sm.svg") no-repeat 110% 100%, #fff7f1;
+  }
+  @media (min-width: 764px) and (max-width: 1023px) {
+    background: url("/assets/svg/round-ball-sm.svg") no-repeat 90% 100%, #fff7f1;
+  }
   @media (min-width: 1024px) and (max-width: 1200px) {
     background: url("/assets/svg/round-ball-lg.svg") no-repeat 90% 100%, #fff7f1;
   }
